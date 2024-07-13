@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-export function Button(props: JSX.IntrinsicElements["button"]) {
+export function ButtonUI(props: JSX.IntrinsicElements["button"]) {
   return (
     <button
       {...props}
