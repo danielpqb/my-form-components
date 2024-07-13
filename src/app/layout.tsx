@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Great_Vibes, Lobster } from "next/font/google";
 import "./globals.css";
+import { twMerge } from "tailwind-merge";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--inter" });
+const gv = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--great-vibes",
+});
+const lobster = Lobster({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--lobster",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      className={twMerge(inter.variable, gv.variable, lobster.variable)}
+      lang="en"
+    >
+      <body className={"font-inter bg-gray-800 text-white"}>{children}</body>
     </html>
   );
 }
