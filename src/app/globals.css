@@ -7,3 +7,11 @@
     text-wrap: balance;
   }
 }
+
+/* input[type="file"]::file-selector-button {
+  display: none;
+}
+input[type="file"]::content {
+  display: none;
+} */
+
